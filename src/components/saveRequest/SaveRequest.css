@@ -1,0 +1,76 @@
+.saverequest-container {
+  display: flex;
+  height: 2.5rem;
+  background-color: rgba(103, 105, 105, 0.055);
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0.8rem;
+  box-sizing: border-box;
+}
+.serverrequest-left {
+  font-weight: bold;
+}
+.serverrequest-right {
+  display: flex;
+  gap: 0.3rem;
+  box-sizing: border-box;
+}
+.serverrequest-btn {
+  width: 6rem;
+
+  height: 2rem;
+  gap: 0.1rem;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-left: 0.2rem;
+}
+.serverrequest-btn-save {
+  width: 4.2rem;
+  height: 1.8rem;
+  background-color: rgba(24, 24, 23, 0.986);
+  border-radius: 0.3rem;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  color: aliceblue;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.serverrequest-btn-down {
+  width: 2rem;
+  height: 1.8rem;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.3rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  padding-bottom: 0.3rem;
+  box-sizing: border-box;
+  color: white;
+}
+.serverrequest-btn-right-left {
+  width: 2rem;
+  height: 1.8rem;
+  background-color: rgba(5, 5, 5, 0.993);
+  border-radius: 0.3rem;
+  align-items: center;
+  display: flex;
+  box-sizing: border-box;
+  color: rgb(250, 155, 31);
+  justify-content: center;
+  gap: 0.3rem;
+}
+.serverrequest-btn-right-right {
+  width: 2rem;
+  height: 1.8rem;
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.3rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: large;
+  box-sizing: border-box;
+  color: white;
+}

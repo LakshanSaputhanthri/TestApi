@@ -1,0 +1,19 @@
+.footer-light {
+  bottom: 0;
+  display: flex;
+  background-color: aqua;
+  height: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.footer-dark {
+  bottom: 0;
+  display: flex;
+  background-color: rgb(80, 82, 82);
+  height: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

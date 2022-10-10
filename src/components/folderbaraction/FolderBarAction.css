@@ -1,0 +1,55 @@
+.folder-bar-action {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 2.2rem;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0.2rem;
+}
+.create-folder {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.sort-folder {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.search-folder {
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  gap: 0.2rem;
+}
+.search-folder-icon {
+  width: 2rem;
+  height: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+.input-folder-name {
+  height: 1.5rem;
+  outline: transparent;
+  border: none;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.103);
+}
+.create-folder:hover,
+.sort-folder:hover,
+.input-folder-name:hover,
+.search-folder-icon:hover {
+  background-color: rgba(61, 60, 59, 0.062);
+  cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.request-title-bar-container {
+  display: flex;
+  height: 2.5rem;
+  box-sizing: border-box;
+  padding-left: 1rem;
+  gap: 0.2rem;
+  margin-top: -0.2rem;
+}
+.title {
+  width: 4rem;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.title:hover {
+  border-bottom: 4px solid red;
+}
+.title:active {
+  border-bottom: 4px solid green;
+}

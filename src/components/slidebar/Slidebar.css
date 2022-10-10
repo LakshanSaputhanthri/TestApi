@@ -1,0 +1,41 @@
+.slidebar-light {
+  background-color: bisque;
+  width: 6rem;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.slidebar-dark {
+  background-color: bisque;
+  width: 6rem;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.item {
+  width: 6rem;
+  height: 4rem;
+  background-color: rgba(37, 37, 36, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+  color: rgb(10, 10, 10);
+  font-size: 12px;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+  font-weight: bold;
+}
+.item:hover {
+  background-color: rgb(37, 37, 36);
+  color: white;
+  cursor: pointer;
+  border-left: 3px solid rgb(236, 199, 35);
+}
+.item:active {
+  border-left: 3px solid green;
+}
