@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MethodDropDownMenu from "../methodDropDown/MethodDropDownMenu";
 import "./RequestUrlBar.css";
-import useUrlStore from "../../store";
+import useUrlStore from "../../stores/store";
 import axios from "axios";
 import useBodyStore from "../../bodyStore";
 

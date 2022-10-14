@@ -1,12 +1,11 @@
 import React from "react";
 import "./FolderBarAction.css";
 
-const FolderBarAction = ({addfolder}) => {
-  
+const FolderBarAction = ({ addfolder }) => {
   return (
     <div className="folder-bar-action">
-      <div className="create-folder">
-        <i className="fas fa-plus" onClick={addfolder}></i>
+      <div className="create-folder" onClick={addfolder}>
+        <i className="fas fa-plus"></i>
       </div>
       <div className="search-folder">
         <div className="search-folder-icon">

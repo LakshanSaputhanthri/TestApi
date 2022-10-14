@@ -1,6 +1,6 @@
 import React from "react";
 import "./MethodDropDown.css";
-import useUrlStore from "../../store";
+import useUrlStore from "../../stores/store";
 
 const MethodDropDownMenu = ({ visible, setMethod }) => {
   const addMethod = useUrlStore((state) => state.addMethod);

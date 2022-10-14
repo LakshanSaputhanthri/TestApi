@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 import "./RequestBody.css";
-import useUrlStore from "../../store";
+import useUrlStore from "../../stores/store";
 import useBodyStore from "../../bodyStore";
 
 const RequestBody = () => {
-  const [bodytext, setBodytext] = useState("jhg");
+  const [bodytext, setBodytext] = useState();
   const data = useUrlStore((state) => state.data);
   const stat = useUrlStore((state) => state.stat);
   const addbodydata = useBodyStore((state) => state.addbodydata);
   addbodydata(bodytext);
-  
 
   let clz = `status-warn-circle status-${stat}`;
   return (
@@ -35,7 +34,7 @@ const RequestBody = () => {
             <div className={clz}></div>
             <div className={clz}></div>
           </div>
-          <pre>{data}</pre>
+          <pre className="abc">{data}</pre>
         </div>
       </div>
     </div>

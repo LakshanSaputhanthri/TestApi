@@ -1,6 +1,6 @@
 import React from "react";
 import "./SaveRequest.css";
-import useUrlStore from "../../store";
+import useUrlStore from "../../stores/store";
 
 
 const SaveRequest = () => {
