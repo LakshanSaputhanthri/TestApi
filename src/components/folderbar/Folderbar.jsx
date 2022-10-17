@@ -1,23 +1,43 @@
 import React, { useState } from "react";
-import useFolderData from "../../stores/folderDataStore";
+
 import useFolderstore from "../../stores/folderStore";
 import FolderBarAction from "../folderbaraction/FolderBarAction";
 import "./Folderbar.css";
 
 function Folderbar() {
-  const fname = useFolderData((state) => state.folderName);
-  const [folderName, setFolderName] = useState(fname);
-  const addfolderName = useFolderData((state) => state.addfolderName);
-  addfolderName(folderName);
   /******************************************* */
   const folderArray = useFolderstore((state) => state.folderArray);
-  console.log(folderArray);
+  useFolderstore((state) => state.folderName);
+  useFolderstore((state) => state.checked);
+  const addFolderName = useFolderstore((state) => state.addFolderName);
   const addFolderArray = useFolderstore((state) => state.addFolderArray);
+  const removeFolder = useFolderstore((state) => state.removeFolder);
+  const setCheckBox = useFolderstore((state) => state.setCheckBox);
   function addfolder() {
-    addFolderArray(folderArray);
+    // console.log(folderArray.length);
+    addFolderArray({
+      foldername: "NewFolder",
+      url: "",
+      index: folderArray.length,
+      folderStoreData: [],
+      checked: false,
+    });
+  }
+  function deleteFolder(e) {
+    let idd = e.target.id;
+    removeFolder(parseInt(idd));
+  }
+  function changeFolderName(e) {
+    let indexNum = e.target.id;
+    let newFolderName = e.target.value;
+    addFolderName(parseInt(indexNum), newFolderName);
   }
   /******************************************* */
-  const [checked, setChecked] = useState(false);
+  function setcheckboxvalue(e) {
+    let val = e.target.checked;
+    let indexNum = e.target.id;
+    setCheckBox(indexNum, val);
+  }
 
   return (
     <div className="folderbar-cointainer">
@@ -26,18 +46,23 @@ function Folderbar() {
         <div className="folder" key={index}>
           <input
             type="checkbox"
-            checked={checked}
-            onChange={() => setChecked(!checked)}
+            id={index}
+            checked={item.checked}
+            onChange={(e) => setcheckboxvalue(e)}
           />
           <input
             type="text"
+            id={index}
             className="folder-item"
-            value={folderName}
-            onChange={(e) => setFolderName(e.target.value)}
+            value={item.foldername}
+            onChange={(e) => changeFolderName(e)}
           />
-          <i className="fa fa-save"></i>
-          <i className="fas fa-edit"></i>
-          <i className="fas fa-trash"></i>
+
+          <i
+            className="fas fa-trash"
+            id={item.index}
+            onClick={(e) => deleteFolder(e)}
+          ></i>
         </div>
       ))}
     </div>

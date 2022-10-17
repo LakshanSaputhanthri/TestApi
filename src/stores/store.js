@@ -11,7 +11,7 @@ let store = (set) => ({
   addMethod: (method) => set(() => ({ method: method })),
 });
 store = devtools(store);
-store = persist(store);
+store = persist(store,{name:"Store"});
 const useUrlStore = create(store);
 export default useUrlStore;
 

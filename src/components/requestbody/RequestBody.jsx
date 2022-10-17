@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./RequestBody.css";
 import useUrlStore from "../../stores/store";
-import useBodyStore from "../../bodyStore";
+import useBodyStore from "../../stores/bodyStore";
 
 const RequestBody = () => {
   const [bodytext, setBodytext] = useState();
